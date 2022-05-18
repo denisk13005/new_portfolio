@@ -14,7 +14,12 @@ const Home = () => {
             </section>
             <section className="projectsContainer">
                 <div className="backgroundProjectsContainer">
-                    <h2>Mes Projets</h2>
+                    <header className="projectsTitleContainer">
+                        <span className="line"></span>
+                        <h2 className="projectsTitle">Mes Projets</h2>
+                        <span className="line"></span>
+                    </header>
+                    <section className="projects"></section>
                 </div>
             </section>
         </main>

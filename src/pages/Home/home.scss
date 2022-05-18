@@ -1,0 +1,43 @@
+@import "../../utils/variables.scss";
+.mainHomeContainer {
+    width: 100%;
+    min-height: 100vh;
+    font-family: dancing;
+    position: relative;
+    .backgroundContainer {
+        background-image: url("../../assets/img/2I9J.gif");
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: 120% 120%;
+        background-position: center;
+        position: sticky;
+        z-index: -100;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+            z-index: -99;
+        }
+    }
+    .titleContainer {
+        color: white;
+        z-index: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 48px;
+        }
+    }
+}

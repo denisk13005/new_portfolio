@@ -9,9 +9,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: roboto;
+    position: relative;
+    z-index: 2;
     .logo {
         margin-left: 5vw;
         font-size: 48px;
+        font-family: dancing;
     }
     .navigation {
         margin-right: 5vw;

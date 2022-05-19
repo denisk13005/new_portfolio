@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header/Header";
+import Gallery from "../../components/Gallery/Gallery";
 import "./home.scss";
 
 const Home = () => {
@@ -13,13 +14,16 @@ const Home = () => {
                 </div>
             </section>
             <section className="projectsContainer">
+                <div className="test">s</div>
                 <div className="backgroundProjectsContainer">
                     <header className="projectsTitleContainer">
                         <span className="line"></span>
                         <h2 className="projectsTitle">Mes Projets</h2>
                         <span className="line"></span>
                     </header>
-                    <section className="projects"></section>
+                    <section className="projects">
+                        <Gallery />
+                    </section>
                 </div>
             </section>
         </main>

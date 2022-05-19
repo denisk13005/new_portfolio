@@ -6,16 +6,17 @@ import "./home.scss";
 const Home = () => {
     return (
         <main className="mainHomeContainer">
+            <Header />
+
             <section className="backgroundContainer">
                 <div className="filter"></div>
 
-                <Header />
                 <div className="titleContainer">
                     <h1 className="homeTitle">Kirmann Denis</h1>
                     <p>Developpeur Front-End React</p>
                 </div>
             </section>
-            <section className="projectsContainer">
+            <section className="projectsContainer" id="projects">
                 <div className="filter"></div>
                 <div className="backgroundProjectsContainer">
                     <header className="projectsTitleContainer">
@@ -28,6 +29,7 @@ const Home = () => {
                     </section>
                 </div>
             </section>
+            <section id="test"></section>
         </main>
     );
 };

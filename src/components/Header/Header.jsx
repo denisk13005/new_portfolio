@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import photo from "../../assets/img/photoId.jpg";
 import "./header.scss";
 
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <header className="headerContainer">
             <div className="logoAndPhoto">
@@ -11,9 +13,17 @@ const Header = () => {
             </div>
             <nav className="navigation">
                 <ul>
-                    <li>Mes Projets</li>
-                    <li>CV</li>
-                    <li>Contactez Moi</li>
+                    <li onClick={() => (window.location.href = "#projects")}>
+                        Mes Projets
+                    </li>
+                    <li onClick={() => navigate("/CV")}>CV</li>
+                    <li
+                        onClick={() =>
+                            (window.location = "mailto:kirmanndenis@gmail.com")
+                        }
+                    >
+                        Contactez Moi
+                    </li>
                 </ul>
             </nav>
         </header>

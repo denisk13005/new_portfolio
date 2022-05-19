@@ -18,16 +18,19 @@
     border: 1px solid lightgray;
     position: relative;
     cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    &:hover {
+        transform: scale(1.06);
+    }
     &__left {
-        &::after {
-            content: "";
-            width: 50%;
-            height: 50%;
-            position: absolute;
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
-            rotate: 45deg;
-            left: 35%;
+        img {
+            width: 100%;
+        }
+    }
+    &__right {
+        img {
+            width: 100%;
+            rotate: 180deg;
         }
     }
 }

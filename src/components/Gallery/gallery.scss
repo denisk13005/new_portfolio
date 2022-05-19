@@ -13,8 +13,9 @@
     align-items: center;
     width: 80px;
     height: 80px;
-    background-color: aqua;
+    background-color: rgba(139, 139, 139, 0.308);
     border-radius: 80px;
+    border: 1px solid lightgray;
     position: relative;
     cursor: pointer;
     &__left {
@@ -31,7 +32,7 @@
     }
 }
 .imgContainer {
-    background-color: aquamarine;
+    background-color: rgba(172, 172, 172, 0.26);
     flex-grow: 0.8;
     height: 80%;
 }

@@ -12,10 +12,37 @@
     font-family: roboto;
     position: relative;
     z-index: 2;
-    .logo {
+    .logoAndPhoto {
+        position: relative;
         margin-left: 5vw;
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover .logo {
+            transform: translateY(-120px);
+        }
+        &:hover .photo {
+            transform: translateX(0px);
+        }
+    }
+    .photo {
+        position: absolute;
+        transform: translateX(120px);
+        object-position: center;
+        width: 100%;
+        border-radius: 50%;
+        transition: transform 0.3s 0.1s linear;
+    }
+    .logo {
+        position: absolute;
         font-size: 48px;
         font-family: dancing;
+        transform: translateY(0);
+        transition: transform 0.3s 0.1s linear;
     }
     .navigation {
         margin-right: 5vw;
@@ -43,13 +70,14 @@
                     left: 0;
                     top: 120%;
                     transform: scale(0);
-                    transition: transform 0.2s ease-in;
+                    transition: transform 0.4s ease-out;
+                    transform-origin: left;
                 }
                 &:hover {
                     &::after {
                         transform: scale(1);
-                        transform-origin: center;
-                        transition: transform 0.2s ease-in;
+                        transform-origin: left;
+                        transition: transform 0.4s ease-out;
                     }
                 }
             }

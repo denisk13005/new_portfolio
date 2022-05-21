@@ -1,28 +1,36 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import photo from "../../assets/img/photoId.jpg";
 import "./header.scss";
+import cv from "../../assets/newCv.pdf";
 
 const Header = () => {
     const navigate = useNavigate();
     return (
         <header className="headerContainer">
             <div className="logoAndPhoto">
-                <div className="logo">dk </div>
+                <div className="logo">
+                    dk <div>développement</div>{" "}
+                </div>
                 <img className="photo" src={photo} alt="" />
             </div>
             <nav className="navigation">
                 <ul>
-                    <li onClick={() => (window.location.href = "#projects")}>
-                        Mes Projets
+                    <li>
+                        <a href="#projects">Mes Projets</a>
                     </li>
-                    <li onClick={() => navigate("/CV")}>CV</li>
-                    <li
-                        onClick={() =>
-                            (window.location = "mailto:kirmanndenis@gmail.com")
-                        }
-                    >
-                        Contactez Moi
+                    <li href={cv} download>
+                        <a href={cv} dowload>
+                            Download Cv
+                        </a>
+                    </li>
+                    <li>
+                        <Link
+                            to="/contact"
+                            // href=" mailto:kirmanndenis@gmail.com"
+                        >
+                            Contactez Moi
+                        </Link>
                     </li>
                 </ul>
             </nav>

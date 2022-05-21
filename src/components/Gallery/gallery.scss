@@ -30,12 +30,38 @@
     &__right {
         img {
             width: 100%;
-            rotate: 180deg;
+            transform: rotate(180deg);
         }
     }
 }
-.imgContainer {
-    background-color: rgba(172, 172, 172, 0.26);
-    flex-grow: 0.8;
+.projectContainer {
     height: 80%;
+    width: 80%;
+    overflow: hidden;
+    background-color: aqua;
+    .imgContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+
+        .in {
+            width: 100%;
+            height: 100%;
+            animation: in 0.2s ease-out;
+        }
+        .out {
+            width: 100%;
+            height: 100%;
+            animation: in 0.2s ease-out;
+        }
+    }
+}
+@keyframes in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

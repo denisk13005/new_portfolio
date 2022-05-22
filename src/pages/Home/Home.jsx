@@ -1,9 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Gallery from "../../components/Gallery/Gallery";
 import "./home.scss";
 
 const Home = () => {
+    const [e, setE] = useState("");
+    const handlePress = (e) => {
+        if (e.key === "ArrowRight") {
+            setE("next");
+            setTimeout(() => {
+                setE("");
+            }, 100);
+        }
+        if (e.key === "ArrowLeft") {
+            setE("previous");
+            setTimeout(() => {
+                setE("");
+            }, 100);
+        } else {
+            return;
+        }
+    };
     return (
         <main className="mainHomeContainer">
             <Header />
@@ -16,7 +33,12 @@ const Home = () => {
                     <p>Developpeur Front-End React</p>
                 </div>
             </section>
-            <section className="projectsContainer" id="projects">
+            <section
+                className="projectsContainer"
+                id="projects"
+                tabIndex={0}
+                onKeyUp={handlePress}
+            >
                 <div className="filter"></div>
                 <div className="backgroundProjectsContainer">
                     <header className="projectsTitleContainer">
@@ -25,7 +47,7 @@ const Home = () => {
                         <span className="line"></span>
                     </header>
                     <section className="projects">
-                        <Gallery />
+                        <Gallery e={e} />
                     </section>
                 </div>
             </section>

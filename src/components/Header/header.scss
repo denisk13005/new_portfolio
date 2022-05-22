@@ -124,7 +124,7 @@
                     }
                 }
                 #desktop {
-                    @media screen and (max-width: 750px) {
+                    @media screen and (max-width: 850px) {
                         display: none;
                     }
                 }
@@ -140,7 +140,7 @@
     justify-content: start;
     padding-bottom: 10px;
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 850px) {
         display: flex;
     }
     div {

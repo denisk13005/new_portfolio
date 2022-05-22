@@ -5,10 +5,11 @@ import chevron from "../../assets/img/chevron.png";
 import { projects } from "../../assets/projects";
 import "../../assets/img/photoId.jpg";
 
-const Gallery = () => {
+const Gallery = ({ e }) => {
     const [index, setIndex] = useState(0);
     const [imgClassName, setImageClassName] = useState("in");
     const [descriptionClassName, setDescriptionClassName] = useState("left");
+    console.log(e);
 
     const next = async () => {
         index >= projects.length - 1 ? setIndex(0) : setIndex(index + 1);
@@ -17,11 +18,10 @@ const Gallery = () => {
             : setImageClassName("in");
         setDescriptionClassName("notVisible");
 
-        const timeout = setTimeout(() => {
+        setTimeout(() => {
             setDescriptionClassName("left");
+            console.log("test");
         }, 100);
-        timeout();
-        return clearTimeout(timeout);
     };
     const previous = () => {
         index === 0 ? setIndex(projects.length - 1) : setIndex(index - 1);
@@ -29,18 +29,22 @@ const Gallery = () => {
             ? setImageClassName("out")
             : setImageClassName("in");
         setDescriptionClassName("notVisible");
-        const timeout = setTimeout(() => {
+        setTimeout(() => {
             setDescriptionClassName("left");
         }, 100);
-        timeout();
-        return clearTimeout(timeout);
     };
-    let techno = projects[index].description.techno;
-    console.log(techno.forEach((el) => console.log(el)));
 
+    useEffect(() => {
+        if (e === "next") {
+            next();
+        }
+        if (e === "previous") {
+            previous();
+        }
+    }, [e]);
     return (
         <section className="gallery">
-            <div className="arrow arrow__left" onClick={previous}>
+            <div className="arrow arrow__left" onClick={previous} tabIndex={1}>
                 <img src={chevron} alt="" />
             </div>
             <div className="projectContainer">

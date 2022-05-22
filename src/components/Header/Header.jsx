@@ -1,35 +1,65 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import photo from "../../assets/img/photoId.jpg";
 import "./header.scss";
 import cv from "../../assets/newCv.pdf";
-
+import projects from "../../assets/img/projects.png";
+import cvIcon from "../../assets/img/cv.png";
+import contact from "../../assets/img/contact.png";
 const Header = () => {
-    const navigate = useNavigate();
     return (
         <header className="headerContainer">
             <div className="logoAndPhoto">
-                <div className="logo">
-                    dk <div>développement</div>{" "}
-                </div>
+                <div className="logo"></div>
                 <img className="photo" src={photo} alt="" />
             </div>
-            <nav className="navigation">
+            <nav className="navigation" aria-label="navigation bar">
                 <ul>
                     <li>
-                        <a href="#projects">Mes Projets</a>
+                        <a
+                            href="#projects"
+                            aria-label="see projects"
+                            aria-current="page"
+                        >
+                            <span id="desktop"> Mes Projets</span>
+                            <div className="mobile">
+                                <img
+                                    className="img__mobile"
+                                    src={projects}
+                                    alt=""
+                                ></img>
+                                <div>Projets</div>
+                            </div>
+                        </a>
                     </li>
                     <li href={cv}>
-                        <a href={cv} dowload="true">
-                            Download Cv
+                        <a href={cv} dowload="true" className="cv">
+                            <span id="desktop">Download Cv</span>
+                            <div className="mobile">
+                                <img
+                                    className="img__mobile"
+                                    src={cvIcon}
+                                    alt=""
+                                ></img>
+                                <div>CV</div>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <Link
                             to="/contact"
                             // href=" mailto:kirmanndenis@gmail.com"
+                            className="contact"
                         >
-                            Contactez Moi
+                            <span id="desktop">Contactez Moi</span>
+                            <div className="mobile">
+                                <img
+                                    className="img__mobile"
+                                    src={contact}
+                                    alt=""
+                                ></img>
+                                <div>Contact</div>
+                            </div>
                         </Link>
                     </li>
                 </ul>

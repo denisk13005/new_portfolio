@@ -17,9 +17,11 @@ const Gallery = () => {
             : setImageClassName("in");
         setDescriptionClassName("notVisible");
 
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setDescriptionClassName("left");
         }, 300);
+        timeout();
+        return clearTimeout(timeout);
     };
     const previous = () => {
         index === 0 ? setIndex(projects.length - 1) : setIndex(index - 1);
@@ -27,10 +29,11 @@ const Gallery = () => {
             ? setImageClassName("out")
             : setImageClassName("in");
         setDescriptionClassName("notVisible");
-
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setDescriptionClassName("left");
         }, 300);
+        timeout();
+        return clearTimeout(timeout);
     };
     let techno = projects[index].description.techno;
     console.log(techno.forEach((el) => console.log(el)));

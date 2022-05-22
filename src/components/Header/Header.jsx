@@ -19,8 +19,8 @@ const Header = () => {
                     <li>
                         <a href="#projects">Mes Projets</a>
                     </li>
-                    <li href={cv} download>
-                        <a href={cv} dowload>
+                    <li href={cv}>
+                        <a href={cv} dowload="true">
                             Download Cv
                         </a>
                     </li>

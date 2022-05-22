@@ -2,36 +2,39 @@ import React, { useEffect, useState } from "react";
 import "./gallery.scss";
 import chevron from "../../assets/img/chevron.png";
 
-import { imagesProjects } from "../../assets/imagesProject"; // importe le tableau de  ^photo à afficher
+import { projects } from "../../assets/projects";
 import "../../assets/img/photoId.jpg";
 
 const Gallery = () => {
-    // const [test, setTest] = useState([photo, photo2]);
     const [index, setIndex] = useState(0);
     const [imgClassName, setImageClassName] = useState("in");
-    // console.log(index, test.length);
+    const [descriptionClassName, setDescriptionClassName] = useState("left");
 
-    useEffect(() => {
-        const container = document.querySelector(".imgContainer");
-        const img = document.createElement("img");
-        container.appendChild(img);
-    }, []);
-
-    const next = () => {
-        index >= imagesProjects.length - 1 ? setIndex(0) : setIndex(index + 1);
+    const next = async () => {
+        index >= projects.length - 1 ? setIndex(0) : setIndex(index + 1);
         imgClassName === "in"
             ? setImageClassName("out")
             : setImageClassName("in");
+        setDescriptionClassName("notVisible");
+
+        setTimeout(() => {
+            setDescriptionClassName("left");
+        }, 300);
     };
     const previous = () => {
-        // index < 0 ? setIndex(imagesProjects.length - 1) : setIndex(index - 1);
-        // setIndex(index - 1);
-        index === 0 ? setIndex(imagesProjects.length - 1) : setIndex(index - 1);
+        index === 0 ? setIndex(projects.length - 1) : setIndex(index - 1);
         imgClassName === "in"
             ? setImageClassName("out")
             : setImageClassName("in");
-        console.log(imagesProjects.length - 1);
+        setDescriptionClassName("notVisible");
+
+        setTimeout(() => {
+            setDescriptionClassName("left");
+        }, 300);
     };
+    let techno = projects[index].description.techno;
+    console.log(techno.forEach((el) => console.log(el)));
+
     return (
         <section className="gallery">
             <div className="arrow arrow__left" onClick={previous}>
@@ -40,10 +43,36 @@ const Gallery = () => {
             <div className="projectContainer">
                 <div className="imgContainer">
                     <img
-                        src={imagesProjects[index].image}
+                        src={projects[index].image}
                         alt=""
                         className={imgClassName}
                     />
+                </div>
+                <div className="descriptionContainer">
+                    <div className={descriptionClassName}>
+                        <h3 className="descriptionContainer__title">
+                            {projects[index].description.title}
+                        </h3>
+                        <div className="descriptionContainer__description">
+                            {projects[index].description.description}
+                        </div>
+                        <div className="descriptionContainer__technos">
+                            <h3>Technologies utilisées :</h3>
+                            {projects[index].description.techno.map(
+                                (el, index) => {
+                                    return <span key={index}>{el}</span>;
+                                }
+                            )}
+                        </div>
+                        <div className="descriptionContainer__link">
+                            <a
+                                href={projects[index].description.link}
+                                target="blank"
+                            >
+                                Visiter le site
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="arrow arrow__right" onClick={next}>

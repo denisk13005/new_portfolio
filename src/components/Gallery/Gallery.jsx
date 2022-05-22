@@ -19,7 +19,7 @@ const Gallery = () => {
 
         const timeout = setTimeout(() => {
             setDescriptionClassName("left");
-        }, 300);
+        }, 100);
         timeout();
         return clearTimeout(timeout);
     };
@@ -31,7 +31,7 @@ const Gallery = () => {
         setDescriptionClassName("notVisible");
         const timeout = setTimeout(() => {
             setDescriptionClassName("left");
-        }, 300);
+        }, 100);
         timeout();
         return clearTimeout(timeout);
     };

@@ -29,7 +29,6 @@ const Home = () => {
                     </section>
                 </div>
             </section>
-            <section id="test"></section>
         </main>
     );
 };

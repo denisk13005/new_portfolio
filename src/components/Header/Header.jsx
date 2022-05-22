@@ -34,7 +34,7 @@ const Header = () => {
                     </li>
                     <li href={cv}>
                         <a href={cv} dowload="true" className="cv">
-                            <span id="desktop">Download Cv</span>
+                            <span id="desktop">Téléchargez mon Cv</span>
                             <div className="mobile">
                                 <img
                                     className="img__mobile"

@@ -5,7 +5,15 @@ import chevron from "../../assets/img/chevron.png";
 import { projects } from "../../assets/projects";
 import "../../assets/img/photoId.jpg";
 
+// aos
+import Aos from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+
 const Gallery = ({ e }) => {
+    useEffect(() => {
+        Aos.init({});
+    }, []);
     const [index, setIndex] = useState(0);
     const [imgClassName, setImageClassName] = useState("in");
     const [descriptionClassName, setDescriptionClassName] = useState("left");
@@ -43,19 +51,33 @@ const Gallery = ({ e }) => {
         }
     }, [e]);
     return (
-        <section className="gallery">
+        <section
+            className="gallery"
+            data-aos="flip-up"
+            data-aos-duration="1000"
+        >
             <div className="arrow arrow__left" onClick={previous} tabIndex={1}>
                 <img src={chevron} alt="" />
             </div>
             <div className="projectContainer">
-                <div className="imgContainer">
+                <div
+                    className="imgContainer"
+                    data-aos-delay="700"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
                     <img
                         src={projects[index].image}
                         alt=""
                         className={imgClassName}
                     />
                 </div>
-                <div className="descriptionContainer">
+                <div
+                    className="descriptionContainer"
+                    data-aos-delay="700"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                >
                     <div className={descriptionClassName}>
                         <h3 className="descriptionContainer__title">
                             {projects[index].description.title}

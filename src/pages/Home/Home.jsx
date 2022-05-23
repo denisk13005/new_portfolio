@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import Gallery from "../../components/Gallery/Gallery";
 import "./home.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import aos from "aos";
 
 const Home = () => {
     const [e, setE] = useState("");
@@ -21,6 +24,9 @@ const Home = () => {
             return;
         }
     };
+    useEffect(() => {
+        Aos.init();
+    });
     return (
         <main className="mainHomeContainer">
             <Header />
@@ -29,8 +35,20 @@ const Home = () => {
                 <div className="filter"></div>
 
                 <div className="titleContainer">
-                    <h1 className="homeTitle">Kirmann Denis</h1>
-                    <p>Developpeur Front-End React</p>
+                    <h1
+                        className="homeTitle"
+                        data-aos="zoom-in"
+                        data-aos-duration="1000"
+                    >
+                        Kirmann Denis
+                    </h1>
+                    <p
+                        data-aos="zoom-out"
+                        data-aos-duration="1000"
+                        data-aos-delay="1000"
+                    >
+                        Developpeur Front-End React
+                    </p>
                 </div>
             </section>
             <section

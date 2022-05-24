@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import photo from "../../assets/img/photoId.jpg";
 import "./header.scss";
-import cv from "../../assets/newCv.pdf";
+import cv from "../../assets/Cv_Kirmann_Denis.pdf";
 import projects from "../../assets/img/projects.png";
 import cvIcon from "../../assets/img/cv.png";
 import contact from "../../assets/img/contact.png";

@@ -2,14 +2,13 @@ import React from "react";
 import "./contact.scss";
 import git from "../../assets/img/github.png";
 import lkd from "../../assets/img/lkd.png";
+import headBand from "../../assets/img/headBand.png";
 
 const Contact = () => {
     return (
         <main className="contactContainer ">
             <aside className="headBandContainer">
-                <div className="headBand">
-                    <p>dk Développement</p>
-                </div>
+                <img src={headBand} alt="" />
             </aside>
             <section className="contactModal">
                 <div className="informations">
@@ -39,7 +38,7 @@ const Contact = () => {
                         href="mailto:kirmanndenis@gmail.com"
                         className="mailLink"
                     >
-                        Envoyer Moi Un Mail
+                        Envoyez moi un mail
                     </a>
                 </div>
             </section>

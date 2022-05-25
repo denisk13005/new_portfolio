@@ -3,6 +3,8 @@ import argentBank from "../assets/img/projects/argentBank.png";
 import santos from "../assets/img/projects/santos.png";
 import sportsee from "../assets/img/projects/sportsee.png";
 import wealthHealth from "../assets/img/projects/wealthHealth.png";
+import ohMyFood from "../assets/img/projects/ohMyFood.png";
+import reservia from "../assets/img/projects/reservia.png";
 export const projects = [
     {
         image: kasa,
@@ -50,6 +52,25 @@ export const projects = [
             description: "Visualisation et création d'employés ",
             techno: ["react", "sass", "redux toolkit", "firebase"],
             link: "https://wealth-health-dk.web.app/"
+        }
+    },
+    {
+        image: ohMyFood,
+        description: {
+            title: "Oh My Food",
+            description:
+                "Site de réservation de plats dans des restaurants gastronomique",
+            techno: ["sass", "html5"],
+            link: "https://denisk13005.github.io/KirmannDenis_3_18032021/"
+        }
+    },
+    {
+        image: reservia,
+        description: {
+            title: "Réservia",
+            description: "Page d'accueil d'un site de location de logements",
+            techno: ["css3", "html5"],
+            link: "https://denisk13005.github.io/KirmannDenis_2_18032021/"
         }
     }
 ];

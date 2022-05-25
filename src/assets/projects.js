@@ -9,7 +9,7 @@ export const projects = [
     {
         image: kasa,
         description: {
-            title: "kasa",
+            title: "Kasa",
             description:
                 "site de réservation d'appartement avec description et avis ",
             techno: ["react", "sass"],
@@ -19,7 +19,7 @@ export const projects = [
     {
         image: argentBank,
         description: {
-            title: "argent Bank",
+            title: "Argent Bank",
             description:
                 "Site bancaire permettant à un utilisateur de visualiser ses comptes ",
             techno: ["react", "sass", "redux tollkit"]
@@ -28,7 +28,7 @@ export const projects = [
     {
         image: santos,
         description: {
-            title: "garage mobile Santos",
+            title: "Garage Mobile Santos",
             description:
                 "ma première réalisation professionnelle, site vitrine d'un garagiste mobile",
             techno: ["html", "css", "javascript"],
@@ -38,7 +38,7 @@ export const projects = [
     {
         image: sportsee,
         description: {
-            title: "sportsee",
+            title: "Sportsee",
             description:
                 "Site permettant la visualisation sous forme de différents graphique des performances d'un utilisateur ",
             techno: ["react", "sass", "rechart"],
@@ -48,7 +48,7 @@ export const projects = [
     {
         image: wealthHealth,
         description: {
-            title: "wealth health",
+            title: "Wealth Health",
             description: "Visualisation et création d'employés ",
             techno: ["react", "sass", "redux toolkit", "firebase"],
             link: "https://wealth-health-dk.web.app/"

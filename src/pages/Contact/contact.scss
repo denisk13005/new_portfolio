@@ -8,7 +8,7 @@
     img {
         width: 50px;
         margin: 20px 50px;
-        cursor: pointer;
+        cursor: p;
     }
     .headBandContainer {
         width: 200px;
@@ -35,7 +35,7 @@
         transform: translate(-50%, -50%);
         border-radius: 10px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         .informations {
             width: 45%;
             height: 100%;
@@ -59,17 +59,13 @@
             }
             .social {
                 display: flex;
-                align-items: center;
-                justify-content: end;
                 margin-top: 20px;
+                justify-content: flex-end;
                 a {
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    margin-left: 10px;
                     img {
                         width: 3vw;
                         transition: transform 0.4s linear;
+                        margin: 0px 0px 0px 10px;
                         &:hover {
                             transform: scale(1.06);
                         }

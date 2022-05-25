@@ -44,8 +44,6 @@
 
     .arrowUp {
         position: absolute;
-        // transform: rotate(-90deg);
-        // height: 100px;
         bottom: 0;
         right: 0vw;
         overflow: hidden;
@@ -55,10 +53,17 @@
             rotate: -90deg;
             width: 150px;
             margin-bottom: -20px;
+            @media screen and (max-width: 850px) {
+                width: 50px;
+                margin-bottom: -10px;
+            }
         }
         p {
             color: white;
             padding-bottom: 20px;
+            @media screen and (max-width: 850px) {
+                padding-bottom: 5px;
+            }
         }
     }
 }

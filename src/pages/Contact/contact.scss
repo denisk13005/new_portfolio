@@ -5,6 +5,11 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
+    img {
+        width: 50px;
+        margin: 20px 50px;
+        cursor: pointer;
+    }
     .headBandContainer {
         width: 200px;
         height: 200px;

@@ -3,10 +3,19 @@ import "./contact.scss";
 import git from "../../assets/img/github.png";
 import lkd from "../../assets/img/lkd.png";
 import headBand from "../../assets/img/headBand.png";
+import home from "../../assets/img/home.png";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+    const navigate = useNavigate();
     return (
         <main className="contactContainer ">
+            <img
+                src={home}
+                alt=""
+                className="back"
+                onClick={() => navigate("/")}
+            />
             <aside className="headBandContainer">
                 <img src={headBand} alt="" />
             </aside>

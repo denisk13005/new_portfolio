@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import Gallery from "../../components/Gallery/Gallery";
+import fleche from "../../assets/img/arrowUp.png";
 import "./home.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import aos from "aos";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
     const [e, setE] = useState("");
     const handlePress = (e) => {
         if (e.key === "ArrowRight") {
@@ -28,7 +30,7 @@ const Home = () => {
         Aos.init();
     });
     return (
-        <main className="mainHomeContainer">
+        <main className="mainHomeContainer" id="mainHomeContainer">
             <Header />
 
             <section className="backgroundContainer">
@@ -68,6 +70,10 @@ const Home = () => {
                         <Gallery e={e} />
                     </section>
                 </div>
+                <a href="#mainHomeContainer" className="arrowUp">
+                    <img src={fleche} alt="" />
+                    <p>go up</p>
+                </a>
             </section>
         </main>
     );

@@ -49,6 +49,7 @@ const Gallery = ({ e }) => {
         if (e === "previous") {
             previous();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [e]);
     return (
         <section

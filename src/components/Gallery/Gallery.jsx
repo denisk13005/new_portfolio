@@ -83,24 +83,26 @@ const Gallery = ({ e }) => {
                         <h3 className="descriptionContainer__title">
                             {projects[index].description.title}
                         </h3>
-                        <div className="descriptionContainer__description">
-                            {projects[index].description.description}
-                        </div>
-                        <div className="descriptionContainer__technos">
-                            <h3>Technologies utilisées :</h3>
-                            {projects[index].description.techno.map(
-                                (el, index) => {
-                                    return <span key={index}>{el}</span>;
-                                }
-                            )}
-                        </div>
-                        <div className="descriptionContainer__link">
-                            <a
-                                href={projects[index].description.link}
-                                target="blank"
-                            >
-                                Visiter le site
-                            </a>
+                        <div className="descriptionAndTechnosContainer">
+                            <div className="descriptionContainer__description">
+                                {projects[index].description.description}
+                            </div>
+                            <div className="descriptionContainer__technos">
+                                <h3>Technologies utilisées :</h3>
+                                {projects[index].description.techno.map(
+                                    (el, index) => {
+                                        return <span key={index}>{el}</span>;
+                                    }
+                                )}
+                            </div>
+                            <div className="descriptionContainer__link">
+                                <a
+                                    href={projects[index].description.link}
+                                    target="blank"
+                                >
+                                    Visiter le site
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

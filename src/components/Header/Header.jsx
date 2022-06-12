@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo from "../../assets/img/photoId.jpg";
+import photo from "../../assets/img/photoId2.png";
 import "./header.scss";
 import cv from "../../assets/Cv_Kirmann_Denis.pdf";
 import projects from "../../assets/img/projects.png";

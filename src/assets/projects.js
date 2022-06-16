@@ -13,7 +13,7 @@ export const projects = [
             description:
                 "site de réservation d'appartement avec description et avis ",
             techno: ["react", "sass"],
-            link: "https://kasa-8tyjmj9y5-denisk13005.vercel.app/"
+            link: "https://kasa-nine.vercel.app/"
         }
     },
     {
@@ -42,7 +42,7 @@ export const projects = [
             description:
                 "Site permettant la visualisation sous forme de différents graphique des performances d'un utilisateur ",
             techno: ["react", "sass", "rechart"],
-            link: "https://sportsee-e0zljye6m-denisk13005.vercel.app/"
+            link: "https://sportsee-hstnqe9f1-denisk13005.vercel.app/"
         }
     },
     {

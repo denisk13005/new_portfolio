@@ -5,6 +5,7 @@ import sportsee from "../assets/img/projects/sportsee.png";
 import wealthHealth from "../assets/img/projects/wealthHealth.png";
 import ohMyFood from "../assets/img/projects/ohMyFood.png";
 import reservia from "../assets/img/projects/reservia.png";
+import amazon from "../assets/img/projects/amazon.png";
 export const projects = [
     {
         image: kasa,
@@ -49,7 +50,8 @@ export const projects = [
         image: wealthHealth,
         description: {
             title: "Wealth Health",
-            description: "Visualisation et création d'employés ",
+            description:
+                "Projet de fin de formation avec utilisation de package personalisé",
             techno: ["react", "sass", "redux toolkit", "firebase"],
             link: "https://wealth-health-dk.web.app/"
         }
@@ -71,6 +73,16 @@ export const projects = [
             description: "Page d'accueil d'un site de location de logements",
             techno: ["css3", "html5"],
             link: "https://denisk13005.github.io/KirmannDenis_2_18032021/"
+        }
+    },
+    {
+        image: amazon,
+        description: {
+            title: "Amazon clone",
+            description:
+                "Petit clone d'amazon avec création d'utilisateur, authentification et paiement en ligne",
+            techno: ["react", "sass", "redux toolkit", "firebase", "stripe"],
+            link: "https://amazon-clone-dk.herokuapp.com/"
         }
     }
 ];

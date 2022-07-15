@@ -24,14 +24,17 @@ const Contact = () => {
                     <h2 className="title">Contactez-moi</h2>
                     <p className="name">Kirmann denis</p>
                     <p className="adress">
-                        34 rue Virgile Marron - 13005 Marseille
+                        34 rue Virgile Marron <span>-</span>{" "}
+                        <span>13005 Marseille</span>
                     </p>
                     <p className="hours">Lun-Ven : 9h00-16h00</p>
                     <p className="dispo">
                         Joignable au <strong>06.24.09.65.48</strong> de 9h à 20h
                         tous les jours
                     </p>
-                    <h3 className="socialTitle">Suivez moi</h3>
+                    <h3 className="socialTitle">
+                        Suivez moi <span>:</span>
+                    </h3>
                     <div className="social">
                         <a href="https://www.linkedin.com/in/denis-kirmann-08488511b/">
                             <img src={lkd} alt="" className="lkd" />
@@ -47,7 +50,7 @@ const Contact = () => {
                         href="mailto:kirmanndenis@gmail.com"
                         className="mailLink"
                     >
-                        Envoyez moi un mail
+                        <button> Envoyez moi un mail</button>
                     </a>
                 </div>
             </section>

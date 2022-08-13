@@ -1,18 +1,19 @@
-import kasa from "../assets/img/projects/kasa.png";
-import argentBank from "../assets/img/projects/argentBank.png";
+import kasa from "../assets/img/projects/kasa-fhd.webp";
+import argentBank from "../assets/img/projects/argentBank.webp";
 import santos from "../assets/img/projects/santos.png";
-import sportsee from "../assets/img/projects/sportsee.png";
-import wealthHealth from "../assets/img/projects/wealthHealth.png";
-import ohMyFood from "../assets/img/projects/ohMyFood.png";
-import reservia from "../assets/img/projects/reservia.png";
-import amazon from "../assets/img/projects/amazon.png";
+import sportsee from "../assets/img/projects/sportsee.webp";
+import wealthHealth from "../assets/img/projects/wealthHealth.webp";
+import ohMyFood from "../assets/img/projects/ohMyFood-lg.webp";
+import reservia from "../assets/img/projects/reservia-fhd.webp";
+import amazon from "../assets/img/projects/amazon-fhd.webp";
+import pizza from "../assets/img/projects/pizza-fhd.webp";
 export const projects = [
     {
         image: kasa,
         description: {
             title: "Kasa",
             description:
-                "site de réservation d'appartement avec description et avis ",
+                "Site de réservation d'appartement avec description et avis ",
             techno: ["react", "sass"],
             link: "https://kasa-nine.vercel.app/"
         }
@@ -31,7 +32,7 @@ export const projects = [
         description: {
             title: "Garage Mobile Santos",
             description:
-                "ma première réalisation professionnelle, site vitrine d'un garagiste mobile",
+                "Ma première réalisation professionnelle, site vitrine d'un garagiste mobile",
             techno: ["html", "css", "javascript"],
             link: "https://denisk13005.github.io/santos/index.html"
         }
@@ -83,6 +84,15 @@ export const projects = [
                 "Petit clone d'amazon avec création d'utilisateur, authentification et paiement en ligne",
             techno: ["react", "sass", "redux toolkit", "firebase", "stripe"],
             link: "https://amazon-clone-dk.herokuapp.com/"
+        }
+    },
+    {
+        image: pizza,
+        description: {
+            title: "Pizza du château",
+            description: "Réalisation d'un site pour le compte d'une pizzéria",
+            techno: ["Html", "sass", "Hostinger"],
+            link: "https://denisk13005.github.io/pizzeriaduchateau/"
         }
     }
 ];

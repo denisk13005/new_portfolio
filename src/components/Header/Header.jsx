@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo from "../../assets/img/photoId2.png";
+import photo from "../../assets/img/photoId2.webp";
 import "./header.scss";
 import cv from "../../assets/Cv_Kirmann_Denis.pdf";
 import projects from "../../assets/img/projects.png";
@@ -46,11 +46,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
-                        <Link
-                            to="/contact"
-                            // href=" mailto:kirmanndenis@gmail.com"
-                            className="contact"
-                        >
+                        <Link to="/contact" className="contact">
                             <span id="desktop">Contactez Moi</span>
                             <div className="mobile">
                                 <img

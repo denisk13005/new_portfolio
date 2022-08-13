@@ -5,10 +5,8 @@ import fleche from "../../assets/img/arrowUp.png";
 import "./home.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-    const navigate = useNavigate();
     const [e, setE] = useState("");
     const handlePress = (e) => {
         if (e.key === "ArrowRight") {

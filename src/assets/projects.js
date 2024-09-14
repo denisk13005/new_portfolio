@@ -1,13 +1,42 @@
-import kasa from "../assets/img/projects/kasa-fhd.webp";
 import argentBank from "../assets/img/projects/argentBank.webp";
+import kasa from "../assets/img/projects/kasa-fhd.webp";
+import lpf from "../assets/img/projects/lfp.jpg";
+import ohMyFood from "../assets/img/projects/ohMyFood-lg.webp";
+import pizza from "../assets/img/projects/pizza-fhd.webp";
+import reservia from "../assets/img/projects/reservia-fhd.webp";
 import santos from "../assets/img/projects/santos.png";
 import sportsee from "../assets/img/projects/sportsee.webp";
 import wealthHealth from "../assets/img/projects/wealthHealth.webp";
-import ohMyFood from "../assets/img/projects/ohMyFood-lg.webp";
-import reservia from "../assets/img/projects/reservia-fhd.webp";
-import amazon from "../assets/img/projects/amazon-fhd.webp";
-import pizza from "../assets/img/projects/pizza-fhd.webp";
 export const projects = [
+    {
+        image: lpf,
+        description: {
+            title: "La Petite Friperie",
+            description:
+                "Création d'une application destinée à une friperie solidaire qui n'a jamais ouvert et qui sert aujourd'hui de sandbox",
+            techno: ["NextJs", "sass", "mongoDb", "prisma", "vercel"],
+            link: "https://lpf.vercel.app//"
+        }
+    },
+    {
+        image: pizza,
+        description: {
+            title: "Pizza du château",
+            description: "Réalisation d'un site pour le compte d'une pizzéria",
+            techno: ["Html", "sass", "Hostinger"],
+            link: "https://www.pizzaduchateau.com/"
+        }
+    },
+    {
+        image: sportsee,
+        description: {
+            title: "Sportsee",
+            description:
+                "Site permettant la visualisation sous forme de différents graphique des performances d'un utilisateur ",
+            techno: ["react", "sass", "rechart"],
+            link: "https://sportsee-hstnqe9f1-denisk13005.vercel.app/"
+        }
+    },
     {
         image: kasa,
         description: {
@@ -37,16 +66,7 @@ export const projects = [
             link: "https://denisk13005.github.io/santos/index.html"
         }
     },
-    {
-        image: sportsee,
-        description: {
-            title: "Sportsee",
-            description:
-                "Site permettant la visualisation sous forme de différents graphique des performances d'un utilisateur ",
-            techno: ["react", "sass", "rechart"],
-            link: "https://sportsee-hstnqe9f1-denisk13005.vercel.app/"
-        }
-    },
+
     {
         image: wealthHealth,
         description: {
@@ -76,23 +96,6 @@ export const projects = [
             link: "https://denisk13005.github.io/KirmannDenis_2_18032021/"
         }
     },
-    {
-        image: amazon,
-        description: {
-            title: "Amazon clone",
-            description:
-                "Petit clone d'amazon avec création d'utilisateur, authentification et paiement en ligne",
-            techno: ["react", "sass", "redux toolkit", "firebase", "stripe"],
-            link: "https://amazon-clone-dk.herokuapp.com/"
-        }
-    },
-    {
-        image: pizza,
-        description: {
-            title: "Pizza du château",
-            description: "Réalisation d'un site pour le compte d'une pizzéria",
-            techno: ["Html", "sass", "Hostinger"],
-            link: "https://denisk13005.github.io/pizzeriaduchateau/"
-        }
-    }
+
+
 ];

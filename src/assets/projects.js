@@ -15,7 +15,7 @@ export const projects = [
             description:
                 "Création d'une application destinée à une friperie solidaire qui n'a jamais ouvert et qui sert aujourd'hui de sandbox",
             techno: ["NextJs", "sass", "mongoDb", "prisma", "vercel"],
-            link: "https://lpf.vercel.app//"
+            link: "https://lpf.vercel.app/"
         }
     },
     {
